@@ -1,0 +1,373 @@
+[
+    {
+        "coord": {
+            "lon": -74.006,
+            "lat": 40.7143
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 32.39,
+            "feels_like": 36.46,
+            "temp_min": 30.54,
+            "temp_max": 34.21,
+            "pressure": 1014,
+            "humidity": 55,
+            "sea_level": 1014,
+            "grnd_level": 1013
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 4.12,
+            "deg": 70
+        },
+        "clouds": {
+            "all": 0
+        },
+        "dt": 1752088495,
+        "sys": {
+            "type": 2,
+            "id": 2037026,
+            "country": "US",
+            "sunrise": 1752053597,
+            "sunset": 1752107333
+        },
+        "timezone": -14400,
+        "id": 5128581,
+        "name": "New York",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -118.2437,
+            "lat": 34.0522
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 28.75,
+            "feels_like": 29.34,
+            "temp_min": 22.36,
+            "temp_max": 33.08,
+            "pressure": 1016,
+            "humidity": 50,
+            "sea_level": 1016,
+            "grnd_level": 997
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 6.17,
+            "deg": 260
+        },
+        "clouds": {
+            "all": 0
+        },
+        "dt": 1752088323,
+        "sys": {
+            "type": 2,
+            "id": 2075946,
+            "country": "US",
+            "sunrise": 1752065350,
+            "sunset": 1752116815
+        },
+        "timezone": -25200,
+        "id": 5368361,
+        "name": "Los Angeles",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -87.65,
+            "lat": 41.85
+        },
+        "weather": [
+            {
+                "id": 802,
+                "main": "Clouds",
+                "description": "scattered clouds",
+                "icon": "03d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 24.15,
+            "feels_like": 24.61,
+            "temp_min": 22.23,
+            "temp_max": 26.72,
+            "pressure": 1016,
+            "humidity": 76,
+            "sea_level": 1016,
+            "grnd_level": 994
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 5.71,
+            "deg": 44,
+            "gust": 5
+        },
+        "clouds": {
+            "all": 35
+        },
+        "dt": 1752088530,
+        "sys": {
+            "type": 2,
+            "id": 2005153,
+            "country": "US",
+            "sunrise": 1752056653,
+            "sunset": 1752110826
+        },
+        "timezone": -18000,
+        "id": 4887398,
+        "name": "Chicago",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -81.3792,
+            "lat": 28.5383
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 34.07,
+            "feels_like": 40.36,
+            "temp_min": 32.8,
+            "temp_max": 34.97,
+            "pressure": 1019,
+            "humidity": 55,
+            "sea_level": 1019,
+            "grnd_level": 1014
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 3.09,
+            "deg": 0
+        },
+        "clouds": {
+            "all": 0
+        },
+        "dt": 1752088194,
+        "sys": {
+            "type": 2,
+            "id": 2084244,
+            "country": "US",
+            "sunrise": 1752057288,
+            "sunset": 1752107181
+        },
+        "timezone": -14400,
+        "id": 4167147,
+        "name": "Orlando",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -99.2506,
+            "lat": 31.2504
+        },
+        "weather": [
+            {
+                "id": 802,
+                "main": "Clouds",
+                "description": "scattered clouds",
+                "icon": "03d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 29.97,
+            "feels_like": 32.39,
+            "temp_min": 29.97,
+            "temp_max": 33.69,
+            "pressure": 1019,
+            "humidity": 58,
+            "sea_level": 1019,
+            "grnd_level": 959
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 4.63,
+            "deg": 190
+        },
+        "clouds": {
+            "all": 40
+        },
+        "dt": 1752088382,
+        "sys": {
+            "type": 1,
+            "id": 3395,
+            "country": "US",
+            "sunrise": 1752061204,
+            "sunset": 1752111844
+        },
+        "timezone": -18000,
+        "id": 4736286,
+        "name": "Texas",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -104.9847,
+            "lat": 39.7392
+        },
+        "weather": [
+            {
+                "id": 800,
+                "main": "Clear",
+                "description": "clear sky",
+                "icon": "01d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 36.54,
+            "feels_like": 33.78,
+            "temp_min": 35.1,
+            "temp_max": 38.09,
+            "pressure": 1007,
+            "humidity": 11,
+            "sea_level": 1007,
+            "grnd_level": 838
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 1.79,
+            "deg": 73,
+            "gust": 4.02
+        },
+        "clouds": {
+            "all": 8
+        },
+        "dt": 1752088620,
+        "sys": {
+            "type": 2,
+            "id": 2101246,
+            "country": "US",
+            "sunrise": 1752061216,
+            "sunset": 1752114584
+        },
+        "timezone": -21600,
+        "id": 5419384,
+        "name": "Denver",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -80.1937,
+            "lat": 25.7743
+        },
+        "weather": [
+            {
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 31.28,
+            "feels_like": 38.28,
+            "temp_min": 30.01,
+            "temp_max": 32.79,
+            "pressure": 1019,
+            "humidity": 72,
+            "sea_level": 1019,
+            "grnd_level": 1018
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 4.63,
+            "deg": 100
+        },
+        "clouds": {
+            "all": 75
+        },
+        "dt": 1752088349,
+        "sys": {
+            "type": 2,
+            "id": 2009435,
+            "country": "US",
+            "sunrise": 1752057363,
+            "sunset": 1752106537
+        },
+        "timezone": -14400,
+        "id": 4164138,
+        "name": "Miami",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -97.7431,
+            "lat": 30.2672
+        },
+        "weather": [
+            {
+                "id": 211,
+                "main": "Thunderstorm",
+                "description": "thunderstorm",
+                "icon": "11d"
+            },
+            {
+                "id": 501,
+                "main": "Rain",
+                "description": "moderate rain",
+                "icon": "10d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 26.08,
+            "feels_like": 26.08,
+            "temp_min": 25.01,
+            "temp_max": 32.53,
+            "pressure": 1019,
+            "humidity": 88,
+            "sea_level": 1019,
+            "grnd_level": 994
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 6.69,
+            "deg": 350
+        },
+        "rain": {
+            "1h": 1.73
+        },
+        "clouds": {
+            "all": 100
+        },
+        "dt": 1752088127,
+        "sys": {
+            "type": 1,
+            "id": 3355,
+            "country": "US",
+            "sunrise": 1752060981,
+            "sunset": 1752111344
+        },
+        "timezone": -18000,
+        "id": 4671654,
+        "name": "Austin",
+        "cod": 200
+    }
+]

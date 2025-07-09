@@ -1,0 +1,82 @@
+[
+    {
+        "city": "New York",
+        "datetime": "2025-07-09 19:14:55",
+        "temperature_C": 32.39,
+        "humidity_%": 55,
+        "weather_main": "Clear",
+        "description": "clear sky",
+        "wind_speed_m/s": 4.12,
+        "pressure_hPa": 1014
+    },
+    {
+        "city": "Los Angeles",
+        "datetime": "2025-07-09 19:12:03",
+        "temperature_C": 28.75,
+        "humidity_%": 50,
+        "weather_main": "Clear",
+        "description": "clear sky",
+        "wind_speed_m/s": 6.17,
+        "pressure_hPa": 1016
+    },
+    {
+        "city": "Chicago",
+        "datetime": "2025-07-09 19:15:30",
+        "temperature_C": 24.15,
+        "humidity_%": 76,
+        "weather_main": "Clouds",
+        "description": "scattered clouds",
+        "wind_speed_m/s": 5.71,
+        "pressure_hPa": 1016
+    },
+    {
+        "city": "Orlando",
+        "datetime": "2025-07-09 19:09:54",
+        "temperature_C": 34.07,
+        "humidity_%": 55,
+        "weather_main": "Clear",
+        "description": "clear sky",
+        "wind_speed_m/s": 3.09,
+        "pressure_hPa": 1019
+    },
+    {
+        "city": "Texas",
+        "datetime": "2025-07-09 19:13:02",
+        "temperature_C": 29.97,
+        "humidity_%": 58,
+        "weather_main": "Clouds",
+        "description": "scattered clouds",
+        "wind_speed_m/s": 4.63,
+        "pressure_hPa": 1019
+    },
+    {
+        "city": "Denver",
+        "datetime": "2025-07-09 19:17:00",
+        "temperature_C": 36.54,
+        "humidity_%": 11,
+        "weather_main": "Clear",
+        "description": "clear sky",
+        "wind_speed_m/s": 1.79,
+        "pressure_hPa": 1007
+    },
+    {
+        "city": "Miami",
+        "datetime": "2025-07-09 19:12:29",
+        "temperature_C": 31.28,
+        "humidity_%": 72,
+        "weather_main": "Clouds",
+        "description": "broken clouds",
+        "wind_speed_m/s": 4.63,
+        "pressure_hPa": 1019
+    },
+    {
+        "city": "Austin",
+        "datetime": "2025-07-09 19:08:47",
+        "temperature_C": 26.08,
+        "humidity_%": 88,
+        "weather_main": "Thunderstorm",
+        "description": "thunderstorm",
+        "wind_speed_m/s": 6.69,
+        "pressure_hPa": 1019
+    }
+]

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Data Visualization</title>
+  <!-- Tailwind CSS CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN for charting -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Custom font for better aesthetics */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Ensure canvas elements are responsive */
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+  <h2 class="text-center text-3xl font-bold text-gray-800 mb-8">Weather Data Visualization</h2>
+
+  <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0">
+    <!-- Temperature Chart Container -->
+    <!-- Added max-h-96 to limit the maximum height of the chart container -->
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2 lg:w-2/5 max-h-96">
+      <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Temperature (°C)</h3>
+      <canvas id="temperatureChart"></canvas>
+    </div>
+
+    <!-- Humidity Chart Container -->
+    <!-- Added max-h-96 to limit the maximum height of the chart container -->
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2 lg:w-2/5 max-h-96">
+      <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Humidity (%)</h3>
+      <canvas id="humidityChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    async function fetchDataAndRender() {
+      // Dummy data for testing when Flask server is not running or accessible
+      const dummyData = [
+        { city: "New York", temperature_C: 25.5, "humidity_%": 60 },
+        { city: "Los Angeles", temperature_C: 28.0, "humidity_%": 50 },
+        { city: "Chicago", temperature_C: 24.1, "humidity_%": 76 },
+        { city: "Orlando", temperature_C: 34.2, "humidity_%": 55 },
+        { city: "Texas", temperature_C: 29.9, "humidity_%": 58 },
+        { city: "Denver", temperature_C: 36.5, "humidity_%": 11 },
+        { city: "Miami", temperature_C: 31.3, "humidity_%": 72 },
+        { city: "Austin", temperature_C: 26.0, "humidity_%": 88 }
+      ];
+
+      let data; // Declare data variable outside try block
+
+      try {
+        // Attempt to fetch data from the Flask backend API
+        // Uncomment the line below and comment out the 'data = dummyData;' line
+        // when you are running your Flask server and want to fetch live data.
+        const response = await fetch("http://127.0.0.1:5000/api/weather_data");
+
+        // Check if the response was successful (status code 200-299)
+        if (!response.ok) {
+          // If fetch fails, fall back to dummy data and log the error
+          console.warn(`HTTP error! status: ${response.status}. Falling back to dummy data.`);
+          data = dummyData;
+        } else {
+          data = await response.json();
+        }
+
+      } catch (error) {
+        // If there's a network error (e.g., server not running), fall back to dummy data
+        console.error("Network or parsing error during fetch. Falling back to dummy data:", error);
+        data = dummyData;
+      }
+
+      // Proceed with rendering charts using the obtained data (either fetched or dummy)
+      if (data && data.length > 0) {
+        const cities = data.map(entry => entry.city);
+        const temperatures = data.map(entry => entry.temperature_C); // Use temperature_C
+        const humidity = data.map(entry => entry["humidity_%"]);      // Use humidity_%
+
+        // Render Temperature Chart
+        const temperatureCtx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(temperatureCtx, {
+          type: 'bar',
+          data: {
+            labels: cities,
+            datasets: [{
+              label: 'Temperature (°C)',
+              data: temperatures,
+              backgroundColor: 'rgba(255, 99, 132, 0.7)', // Slightly more opaque
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1,
+              borderRadius: 5, // Rounded bars
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false, // Allow charts to resize freely
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Temperature (°C)'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'City'
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                display: true,
+                position: 'top',
+              },
+              title: {
+                display: false, // Title is in h3 tag
+              }
+            }
+          }
+        });
+
+        // Render Humidity Chart
+        const humidityCtx = document.getElementById('humidityChart').getContext('2d');
+        new Chart(humidityCtx, {
+          type: 'bar',
+          data: {
+            labels: cities,
+            datasets: [{
+              label: 'Humidity (%)',
+              data: humidity,
+              backgroundColor: 'rgba(54, 162, 235, 0.7)', // Slightly more opaque
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1,
+              borderRadius: 5, // Rounded bars
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false, // Allow charts to resize freely
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Humidity (%)'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'City'
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                display: true,
+                position: 'top',
+              },
+              title: {
+                display: false, // Title is in h3 tag
+              }
+            }
+          }
+        });
+      } else {
+        // Display a user-friendly message if no data is available
+        const container = document.querySelector('.flex');
+        if (container) {
+          container.innerHTML = `
+            <div class="text-center text-red-600 text-lg p-4 bg-red-100 rounded-lg shadow-md">
+              <p>No weather data available to display charts.</p>
+              <p>Please ensure your Flask application is running and accessible, or check the dummy data.</p>
+              <p>Check your browser's console (F12) for more technical details.</p>
+            </div>
+          `;
+        }
+      }
+    }
+
+    // Call the function to fetch data and render charts when the DOM is ready
+    document.addEventListener('DOMContentLoaded', fetchDataAndRender);
+  </script>
+</body>
+</html>
